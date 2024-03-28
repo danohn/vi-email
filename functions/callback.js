@@ -2,6 +2,8 @@ const swapRoles = true;
 const sgMail = require("@sendgrid/mail");
 
 exports.handler = async (context, event, callback) => {
+  console.log(event);
+
   sgMail.setApiKey(context.SENDGRID_API_SECRET);
 
   const transcriptSid = event.transcript_sid;
@@ -45,11 +47,12 @@ exports.handler = async (context, event, callback) => {
     };
 
     message = await sgMail.send(msg);
+    console.log("Email sent!");
   } catch (error) {
     console.error(error);
     return callback(error);
   }
 
-  let resp = "";
+  let resp = "Email sent!";
   return callback(null, resp);
 };
