@@ -1,6 +1,6 @@
 # Voice Intelligence Email Transcript
 
-A Twilio Serverless Function that sends an email with a Voice Intelligence Transcription using Sendgrid.
+A Twilio Serverless Function that emails Voice Intelligence transcripts using SendGrid.
 
 ## Requirements
 
