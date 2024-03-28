@@ -13,7 +13,9 @@ A Twilio Serverless Function that sends an email with a Voice Intelligence Trans
 
 1. `git clone https://github.com/danohn/vi-email.git`
 2. `cd vi-email`
-3. `twilio serverless:deploy`
+3. `mv .env.example .env`
+4. `nano .env` (replace placeholders with real values)
+5. `twilio serverless:deploy`
 
 ## Usage
 
